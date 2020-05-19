@@ -1,0 +1,41 @@
+@use '../styles/variables' as v;
+
+.services {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    @media (max-width: v.$mobile-resolution) {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.service {
+    display: flex;
+
+    width: 260px;
+    height: 350px;
+    padding: 0 25px 25px;
+
+    box-shadow: inset 0px -80px 100px 0px v.$primary-color;
+
+    h3 {
+        margin-top: auto;
+        text-align: center;
+        color: v.$secondary-color;
+    }
+
+    @media (max-width: v.$tablet-resolution) {
+        background-position: center;
+        background-repeat: no-repeat;
+        width: calc(50% - 80px);
+        &:not(:last-child) {
+            margin-bottom: 10px;
+        }
+    }
+
+    @media (max-width: v.$mobile-resolution) {
+        width: 100%;
+    }
+}

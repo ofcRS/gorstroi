@@ -1,0 +1,51 @@
+@use '../styles/variables' as v;
+
+.contacts {
+    display: flex;
+    flex-direction: column;
+
+    width: 360px;
+    margin-bottom: 70px;
+
+    .contacts__title {
+        font-size: 22px;
+        color: v.$light-blue;
+
+        margin-bottom: 45px;
+    }
+
+    .contacts__icons {
+        .contacts__icons__icon {
+            display: flex;
+            align-items: center;
+
+            margin-bottom: 18px;
+
+            img {
+                margin-right: 40px;
+            }
+
+            a {
+                color: black;
+                text-decoration: none;
+            }
+        }
+    }
+
+    .contacts__qr {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .contacts__qr__info {
+            width: 160px;
+
+            font-size: 16px;
+            text-align: center;
+
+            span {
+                color: v.$primary-color;
+            }
+        }
+    }
+}

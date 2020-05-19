@@ -1,0 +1,14 @@
+@use '../styles/variables' as v;
+
+.button {
+    border: none;
+    cursor: pointer;
+    color: v.$primary-color;
+
+    &--primary {
+        @extend .button;
+
+        background: v.$primary-color;
+        color: v.$secondary-color;
+    }
+}

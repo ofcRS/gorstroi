@@ -1,0 +1,14 @@
+@use '../styles/variables' as v;
+
+.block-title {
+    width: 100%;
+    font-size: 30px;
+    line-height: 36px;
+
+    margin-top: 48px;
+    margin-bottom: 30px;
+
+    @media (max-width: v.$tablet-resolution) {
+        text-align: center;
+    }
+}

@@ -1,0 +1,46 @@
+@use '../styles/variables' as v;
+
+.document {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    .document__info {
+        margin-bottom: 28px;
+    }
+
+    .document__cert {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+
+        width: 230px;
+        margin-bottom: 40px;
+
+        div {
+            width: 100%;
+            background: v.$light-blue;
+            height: 133px;
+        }
+
+        span {
+            font-size: 18px;
+            text-align: center;
+        }
+    }
+    .document__cert--tall {
+        @extend .document__cert;
+        div {
+            background: v.$primary-color;
+            height: 300px;
+        }
+    }
+
+    @media (max-width: v.$tablet-resolution) {
+        flex-direction: column;
+        align-items: center;
+        .document__info {
+            text-align: justify;
+        }
+    }
+}

@@ -1,0 +1,39 @@
+@use '../styles/variables' as v;
+
+.footer {
+    background: v.$primary-color;
+    height: 160px;
+
+    .footer__wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        height: 160px;
+
+        .footer__right-block {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            color: v.$secondary-color;
+            height: 75px;
+            width: 700px;
+
+            nav {
+                width: 100%;
+            }
+        }
+
+        .footer__social-links {
+            display: flex;
+            justify-content: space-between;
+            width: 284px;
+        }
+    }
+
+    @media (max-width: v.$tablet-resolution) {
+        .footer__wrapper {
+            flex-wrap: wrap;
+        }
+    }
+}

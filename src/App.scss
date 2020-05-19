@@ -1,0 +1,28 @@
+@font-face {
+    font-family: 'Lato Black';
+    src: url('fonts/lato_black.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Lato Bold';
+    src: url('fonts/lato_bold.woff2') format('woff2');
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+
+    *,
+    ::after,
+    ::before {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+
+        font-family: 'Lato Black', sans-serif;
+    }
+}

@@ -1,0 +1,32 @@
+@use '../styles/variables' as v;
+
+.about {
+    display: flex;
+    align-items: center;
+
+    .about__text-block {
+        margin-right: 35px;
+
+        font-size: 16px;
+        font-family: 'Lato Regular', sans-serif;
+    }
+    @media (max-width: v.$tablet-resolution) {
+        flex-direction: column;
+
+        .about__image-block {
+            order: 1;
+
+            img {
+                width: 100%;
+            }
+        }
+
+        .about__text-block {
+            margin-right: 0;
+
+            text-align: justify;
+
+            order: 2;
+        }
+    }
+}

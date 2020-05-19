@@ -1,0 +1,46 @@
+@use '../styles/variables' as v;
+
+.slider {
+    background: url('../assets/1x/header_bg.png');
+    height: 722px;
+
+    box-shadow: 0 15px 8px 0 white inset;
+}
+
+.slide {
+    display: flex;
+    align-items: center;
+    height: 722px;
+
+    .slide__slide-text {
+        .slide__slide-text__head {
+            font-size: 60px;
+
+            width: 890px;
+            margin-bottom: 45px;
+        }
+
+        .slide__slide-text__body {
+            font-size: 19px;
+
+            width: 660px;
+        }
+    }
+
+    @media (max-width: v.$tablet-resolution) {
+        .slide__slide-text {
+            .slide__slide-text__head {
+                font-size: 40px;
+
+                width: unset;
+                margin-bottom: 45px;
+            }
+
+            .slide__slide-text__body {
+                font-size: 14px;
+
+                width: unset;
+            }
+        }
+    }
+}

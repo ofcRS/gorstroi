@@ -1,0 +1,73 @@
+@use '../styles/variables' as v;
+
+.header {
+    display: flex;
+    justify-content: space-between;
+
+    padding-top: 36px;
+
+    .header__right-section {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        .header__right-section__address-section {
+            display: flex;
+            justify-content: space-between;
+
+            height: 78px;
+            width: 670px;
+
+            .header__right-section__address-section__address {
+                text-align: right;
+                width: 430px;
+
+                a {
+                    color: black;
+                    font-size: 24px;
+                    text-decoration: none;
+                }
+
+                p {
+                    font-family: 'Lato Regular', sans-serif;
+                    font-size: 22px;
+                }
+
+                @media (max-width: v.$tablet-resolution) {
+                    text-align: left;
+                    width: unset;
+
+                    a {
+                        font-size: 16px;
+                    }
+
+                    p {
+                        font-family: 'Lato Regular', sans-serif;
+                        font-size: 14px;
+                    }
+                }
+            }
+
+            & button {
+                width: 220px;
+
+                font-size: 18px;
+            }
+
+            @media (max-width: v.$tablet-resolution) {
+                width: unset;
+                margin-bottom: 20px;
+            }
+        }
+        @media (max-width: v.$tablet-resolution) {
+            width: 100%;
+        }
+    }
+
+    @media (max-width: v.$tablet-resolution) {
+        img {
+            display: none;
+        }
+    }
+
+}
